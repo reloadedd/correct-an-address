@@ -1,16 +1,10 @@
 # Correct an Address
 
 ```
-
-
-8""""8    8""""8                                                       8""""8                                     
-     8    8    " eeeee eeeee  eeeee  eeee eeee eeeee    eeeee eeeee    8    8 eeeee eeeee eeeee  eeee eeeee eeeee 
-eeeee8    8e     8  88 8   8  8   8  8    8  8   8      8   8 8   8    8eeee8 8   8 8   8 8   8  8    8   " 8   " 
-88        88     8   8 8eee8e 8eee8e 8eee 8e     8e     8eee8 8e  8    88   8 8e  8 8e  8 8eee8e 8eee 8eeee 8eeee 
-""        88   e 8   8 88   8 88   8 88   88     88     88  8 88  8    88   8 88  8 88  8 88   8 88      88    88 
-88        88eee8 8eee8 88   8 88   8 88ee 88e8   88     88  8 88  8    88   8 88ee8 88ee8 88   8 88ee 8ee88 8ee88 
-                                                                                                                  
-
+dP"Yb    .d88b                             w                       db       8    8                      
+"  d8    8P    .d8b. 8d8b 8d8b .d88b .d8b w8ww    .d88 8d8b.      dPYb   .d88 .d88 8d8b .d88b d88b d88b 
+  dP     8b    8' .8 8P   8P   8.dP' 8     8      8  8 8P Y8     dPwwYb  8  8 8  8 8P   8.dP' `Yb. `Yb. 
+  w      `Y88P `Y8P' 8    8    `Y88P `Y8P  Y8P    `Y88 8   8    dP    Yb `Y88 `Y88 8    `Y88P Y88P Y88P 
 ```
 
 ## Requirements
