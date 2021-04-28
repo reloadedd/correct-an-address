@@ -6,8 +6,7 @@ o   o      /                          |                    / \    |    |
    /      O     o-o o-o o-o o-o  o-o -o-      oo o-o      o---o o-O  o-O o-o o-o o-o o-o
   o        \    | | |   |   |-' |     |      | | |  |     |   ||  | |  | |   |-'  \   \ 
             o-o o-o o   o   o-o  o-o  o      o-o-o  o     o   o o-o  o-o o   o-o o-o o-o
-  O                                                                                     
-         🌠 Copyright © 2021 Ionuț Roșca <ionut.rosca@info.uaic.ro>
+  O                   🌠 Copyright © 2021 Ionuț Roșca <ionut.rosca@info.uaic.ro>                                                                                     
 ```
 
 ## Requirements
