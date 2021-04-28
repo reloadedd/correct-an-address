@@ -1,10 +1,13 @@
 # Correct an Address
 
 ```
-dP"Yb    .d88b                             w                       db       8    8                      
-"  d8    8P    .d8b. 8d8b 8d8b .d88b .d8b w8ww    .d88 8d8b.      dPYb   .d88 .d88 8d8b .d88b d88b d88b 
-  dP     8b    8' .8 8P   8P   8.dP' 8     8      8  8 8P Y8     dPwwYb  8  8 8  8 8P   8.dP' `Yb. `Yb. 
-  w      `Y88P `Y8P' 8    8    `Y88P `Y8P  Y8P    `Y88 8   8    dP    Yb `Y88 `Y88 8    `Y88P Y88P Y88P 
+ o-o        o-o                       o                     O     o    o                 
+o   o      /                          |                    / \    |    |                 
+   /      O     o-o o-o o-o o-o  o-o -o-      oo o-o      o---o o-O  o-O o-o o-o o-o o-o 
+  o        \    | | |   |   |-' |     |      | | |  |     |   ||  | |  | |   |-'  \   \  
+            o-o o-o o   o   o-o  o-o  o      o-o-o  o     o   o o-o  o-o o   o-o o-o o-o 
+  O                                                                                                                                                                  
+        🌠 Copyright © 2021 Ionuț Roșca <ionut.rosca@info.uaic.ro>
 ```
 
 ## Requirements
