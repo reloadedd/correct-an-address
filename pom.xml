@@ -11,7 +11,7 @@
 
     <groupId>com.github.reloadedd</groupId>
     <artifactId>correct-an-address</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <version>0.3.0-SNAPSHOT</version>
     <name>correct-an-address</name>
     <description>Sprint Boot Application which exposes an REST API for correcting addresses</description>
 
@@ -28,6 +28,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
 
