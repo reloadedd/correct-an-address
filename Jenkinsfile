@@ -1,4 +1,6 @@
 pipeline {
+    agent any
+
 	environment {
 		PORT						= '5080'
 		EXPOSED_PORT				= '5080'
