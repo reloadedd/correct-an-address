@@ -16,23 +16,31 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.reloadedd.correctanaddress;
+package com.github.reloadedd.correctanaddress;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
- * Test class containing tests for the Application.
+ * Application's starting point class which exposes the <code>/hello</code> route.
  *
  * @author  Ionuț Roșca
  * @version 0.1.0
  */
-@SpringBootTest
-class CorrectAnAddressApplicationTests {
+@SpringBootApplication
+@RestController
+public class CorrectAnAddressApplication {
 
-    @Test
-    void contextLoads() {
+    public static void main(String[] args) {
+        SpringApplication.run(CorrectAnAddressApplication.class, args);
     }
 
+    @GetMapping("/hello")
+    public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {
+        return String.format("Hello %s!", name);
+    }
 }

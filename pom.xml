@@ -14,7 +14,7 @@
     <name>correct-an-address</name>
     <description>Sprint Boot Application which exposes an REST API for correcting addresses</description>
     <properties>
-        <java.version>16</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
