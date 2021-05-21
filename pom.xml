@@ -11,7 +11,7 @@
 
     <groupId>com.github.reloadedd</groupId>
     <artifactId>correct-an-address</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
     <name>correct-an-address</name>
     <description>Sprint Boot Application which exposes an REST API for correcting addresses</description>
 
