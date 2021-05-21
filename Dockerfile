@@ -1,4 +1,4 @@
-FROM openjdk:16-slim
+FROM openjdk:11.0.9-jre-slim
 
 LABEL author="Ionuț Roșca"
 LABEL email="ionut.rosca@info.uaic.ro"
