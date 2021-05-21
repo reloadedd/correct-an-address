@@ -7,6 +7,6 @@ LABEL version="0.2.0"
 WORKDIR /app
 COPY ./target/correct-an-address-0.2.0-SNAPSHOT.jar /app
 
-EXPOSE 5080
+EXPOSE 5443
 
 CMD ["java", "-jar", "correct-an-address-0.2.0-SNAPSHOT.jar"]

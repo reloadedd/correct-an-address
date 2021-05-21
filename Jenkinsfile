@@ -2,8 +2,8 @@ pipeline {
     agent any
 
 	environment {
-		PORT						= '5080'
-		EXPOSED_PORT				= '5080'
+		PORT						= '5443'
+		EXPOSED_PORT				= '5443'
 		IMAGE_NAME					= 'correct-an-address'
 		GITHUB_SSH_ACCESS_KEY_ID 	= '5ee65712-5c65-465c-a4b2-49b3ddf38429'
 		GITHUB_REPOSITORY_URL 		= 'git@github.com:reloadedd/correct-an-address.git'
