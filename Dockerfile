@@ -5,6 +5,7 @@ LABEL email="ionut.rosca@info.uaic.ro"
 LABEL version="0.3.0"
 
 WORKDIR /app
+COPY ./credentials.properties ~/.here/
 COPY ./target/correct-an-address-0.3.0-SNAPSHOT.jar /app
 
 EXPOSE 5443

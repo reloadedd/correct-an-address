@@ -57,6 +57,7 @@ pipeline {
                                     onlyIfSuccessful: true
 
                 // Dockerize it!
+                sh "cp ~/.here/credentials.properties ."
                 sh "docker image build -t ${IMAGE_NAME}:${VERSION_NUMBER} ."
             }
         }
