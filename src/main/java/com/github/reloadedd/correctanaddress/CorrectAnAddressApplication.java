@@ -18,6 +18,7 @@
 
 package com.github.reloadedd.correctanaddress;
 
+import com.github.reloadedd.correctanaddress.here.HereAuthentication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,8 +37,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class CorrectAnAddressApplication {
 
     public static void main(String[] args) {
+        HereAuthentication auth = new HereAuthentication();
+
         SpringApplication.run(CorrectAnAddressApplication.class, args);
     }
+
 
     @GetMapping("/hello")
     public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {

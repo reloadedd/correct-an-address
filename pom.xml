@@ -33,6 +33,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.here.account</groupId>
+            <artifactId>here-oauth-client</artifactId>
+            <version>0.4.22</version>
+        </dependency>
     </dependencies>
 
     <build>

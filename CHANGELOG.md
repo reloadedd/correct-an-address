@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Jenkins will set the status of git commits
 
 ### Changed
-- Remove unnecessary classes from the `config` package and replace with `server.ssl.enabled=true` 
+- Remove unnecessary classes from the `config` package and replace with `server.ssl.enabled=true`
 
 ## [0.3.0] - 2021-05-22
 ### Added

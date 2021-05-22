@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>? Correct an Address</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-<p><a href="/hello">Greet the world!</a></p>
 
-<form action="/hello" method="GET" id="nameForm">
-  <div>
-    <label for="nameField">How should the app call you?</label>
-    <input name="myName" id="nameField">
-    <button>Greet me!</button>
-  </div>
-</form>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CorrectAnAddress</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="assets/css/Map-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <section class="map-clean"></section>
+    <section class="register-photo" style="background: rgb(44,40,41);border-radius: 0px;margin: 0px;margin-top: 0px;margin-bottom: 0px;border-top: 2px solid var(--blue) ;border-bottom-width: 3px;border-bottom-color: var(--blue);">
+        <section class="highlight-phone" style="margin-bottom: 72px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8" id="about">
+                        <div class="intro">
+                            <h2 style="color: var(--purple);">? Correct an address</h2>
+                            <p>Correct an address is faculty project for the Advanced Programming class. It is written in Java and its main utility is, yes, you've guessed it, to correct a partially correct address.<br></p><a class="btn btn-primary" role="button" href="#correct-form">SHOW ME YOUR MAGIC</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="d-none d-md-block phone-mockup"><img class="device" src="assets/img/phone.svg">
+                            <div class="screen"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form id="correct-form" method="post">
+                <h2 class="text-center"><strong>Correct</strong> this address</h2>
+                <div class="form-group"><input class="form-control" type="text" name="country" placeholder="Country"></div>
+                <div class="form-group"><input class="form-control" type="text" name="state" placeholder="State"></div>
+                <div class="form-group"><input class="form-control" type="text" name="city" placeholder="City"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background: rgb(0,128,255);">Correct me!</button></div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer-basic">
+        <div class="social"><a href="https://www.linkedin.com/in/ionut-rosca-25240718b/"><i class="icon ion-social-linkedin"></i></a><a href="https://twitter.com/0xreloadedd"><i class="icon ion-social-twitter"></i></a><a href="https://github.com/reloadedd"><i class="icon ion-social-github"></i></a></div>
+        <p class="copyright">Ionuț Roșca © 2021</p>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>
