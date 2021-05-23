@@ -16,21 +16,22 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.github.reloadedd.correctanaddress;
+package com.github.reloadedd.correctanaddress.routes;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 /**
- * Application's starting point class which exposes the <code>/hello</code> route.
+ * Routes the user to the index page of the website.
  *
  * @author  Ionuț Roșca
  * @version 0.1.0
  */
-@SpringBootApplication
-public class CorrectAnAddressApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(CorrectAnAddressApplication.class, args);
+@Controller
+public class IndexRoute {
+    @GetMapping({"/", "/index", "/index.html"})
+    public String displayIndexPage() {
+        return "index";
     }
 }
