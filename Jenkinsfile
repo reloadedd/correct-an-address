@@ -48,7 +48,7 @@ pipeline {
                 // Package the Application
                 // Because, by default, the `package` command runs the test (thus, doing the Test stage's job),
                 // add the `-Dmaven.test.skip.exec` option to skip testing at the packaging stage.
-                sh './mvnw package -Dmaven.test.skip.exec'
+                sh 'cd Web && ./mvnw package -Dmaven.test.skip.exec'
                 archiveArtifacts 	allowEmptyArchive: false,
                                     artifacts: 'target/*.jar',
                                     caseSensitive: true,
