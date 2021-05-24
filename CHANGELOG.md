@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## Modified
+- Move `Jenkinksfile` to the root
+- Modify `Jenkinsfile` to take into account the new folder structure
+
 ## [0.5.0] - 2021-05-25
 ### Added
 - Create the GUI program that will interact with the REST API

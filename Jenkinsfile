@@ -57,8 +57,8 @@ pipeline {
                                     onlyIfSuccessful: true
 
                 // Dockerize it!
-                sh "cp ~/.here/credentials.properties ."
-                sh "docker image build -t ${IMAGE_NAME}:${VERSION_NUMBER} ."
+                sh "cd Web && cp ~/.here/credentials.properties ."
+                sh "cd Web && docker image build -t ${IMAGE_NAME}:${VERSION_NUMBER} ."
             }
         }
 
@@ -78,10 +78,10 @@ pipeline {
         stage('Test') {
             steps {
                 // Run the tests
-                sh './mvnw test -Dmaven.test.failure.ignore=true'
+                sh 'cd Web && ./mvnw test -Dmaven.test.failure.ignore=true'
 
                 // JUnit Results
-                junit 'target/surefire-reports/*.xml'
+                junit 'Web/target/surefire-reports/*.xml'
             }
         }
     }
