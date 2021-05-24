@@ -20,7 +20,7 @@ package com.github.reloadedd.correctanaddress.here;
 
 import com.here.account.oauth2.HereAccessTokenProvider;
 
-public class HereAuthentication {
+public class HereMapsApiAuthentication {
     /**
      * A simple method that builds a HereAccessTokenProvider,
      * gets one Access Token,
@@ -39,7 +39,6 @@ public class HereAuthentication {
         } catch (Exception e) {
             trouble(e);
         }
-
     }
 
     protected void useAccessToken(String accessToken) {
