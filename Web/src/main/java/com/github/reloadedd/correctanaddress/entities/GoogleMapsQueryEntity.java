@@ -16,19 +16,27 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.github.reloadedd.correctanaddress.config;
+package com.github.reloadedd.correctanaddress.entities;
 
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-@EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+/**
+ * Entity class responsible with the generation of a valid Google Maps url.
+ *
+ * @author  Ionuț Roșca
+ * @version 0.1.0
+ */
+public class GoogleMapsQueryEntity {
+    private static final String GOOGLE_MAPS_URL = "https://www.google.com/maps/embed/v1/place";
+    private static final String API_KEY = "AIzaSyBGZuTWkfZ_hjNmMT-b70Z2ka6BAZCYkCM";
+    private static final int ZOOM_LEVEL = 15;
+    private final AddressEntity addressEntity;
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.requiresChannel()
-                .anyRequest()
-                .requiresSecure();
+    public GoogleMapsQueryEntity(AddressEntity addressEntity) {
+        this.addressEntity = addressEntity;
+    }
+
+    public String getGoogleMapsURL() {
+        return String.format("%s?key=%s&q=%s&zoom=%d", GOOGLE_MAPS_URL, API_KEY, addressEntity.constructAddress(),
+                ZOOM_LEVEL);
     }
 }

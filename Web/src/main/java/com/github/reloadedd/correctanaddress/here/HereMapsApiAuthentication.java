@@ -20,6 +20,12 @@ package com.github.reloadedd.correctanaddress.here;
 
 import com.here.account.oauth2.HereAccessTokenProvider;
 
+
+/**
+ * Authenticator class for the HERE Maps API.
+ *
+ * @version 0.1.0
+ */
 public class HereMapsApiAuthentication {
     /**
      * A simple method that builds a HereAccessTokenProvider,

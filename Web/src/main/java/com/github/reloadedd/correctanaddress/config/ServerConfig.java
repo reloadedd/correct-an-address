@@ -27,6 +27,12 @@ import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+/**
+ * Configuration class related to the server settings.
+ *
+ * @version 0.1.0
+ */
 @Configuration
 public class ServerConfig {
     private static final int HTTP_PORT = 5080;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>? Correct an Address</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/map.png">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="/assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="/assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/Map-Clean.css">
+    <link rel="stylesheet" href="/assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <section class="map-clean">
+        <div class="container">
+            <div class="intro">
+                <h1 class="text-center">
+                    <a class="navbar-brand" href="/index" style="font-size: 45px;">? Correct an address</a>
+                </h1>
+                <p class="text-center">Here you go, the waiting is over! Our super intelligent systems found and corrected your address to:
+                    <span id="bold" th:text="${address}"></span>.</p>
+            </div>
+        </div>
+            <iframe allowfullscreen="" frameborder="0"
+                    th:attr="src=${query}"
+                    width="100%" height="600">
+            </iframe>
+        <footer class="footer-basic">
+            <div class="social"><a href="https://www.linkedin.com/in/ionut-rosca-25240718b/"><i class="icon ion-social-linkedin"></i></a><a href="https://twitter.com/0xreloadedd"><i class="icon ion-social-twitter"></i></a><a href="https://github.com/reloadedd"><i class="icon ion-social-github"></i></a></div>
+            <div class="copyright">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <p class="copyright">Ionuț Roșca © 2021</p>
+        </footer>
+    </section>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+</body>
+
+</html>
