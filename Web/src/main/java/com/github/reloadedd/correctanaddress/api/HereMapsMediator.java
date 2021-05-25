@@ -57,8 +57,8 @@ public class HereMapsMediator {
     }
 
     public String locate(AddressEntity address) {
-        String url = String.format("%s?q=%s", HERE_MAPS_GEOCODE_URL, String.format("country=%s;state=%s;city=%s",
-                address.getCountryName(), address.getStateName(), address.getCityName()));
+        String url = String.format("%s?q=%s&lang=%s", HERE_MAPS_GEOCODE_URL, String.format("country=%s;state=%s;city=%s",
+                address.getCountryName(), address.getStateName(), address.getCityName()), address.getLanguage());
 
         /* Set the token for the HERE Maps API */
         HttpHeaders headers = new HttpHeaders();

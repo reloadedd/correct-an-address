@@ -45,12 +45,13 @@ public class RestAPI {
     @PostMapping(value = "/correct-this-address", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<HereMapsAddressEntity> correctAddressApiRoute(@RequestParam String country,
                                                                         @RequestParam String state,
-                                                                        @RequestParam String city)
+                                                                        @RequestParam String city,
+                                                                        @RequestParam String language)
             throws NoTokenReceivedException {
         Gson gson = new Gson();
         HereMapsMediator mediator = new HereMapsMediator();
 
-        AddressEntity addressEntity = new AddressEntity(country, state, city);
+        AddressEntity addressEntity = new AddressEntity(country, state, city, language);
         String locateAddressJsonResponse = mediator.locate(addressEntity);
 
         /* Parse the whole JSON and extract the contents of the "items" which will contain a list of

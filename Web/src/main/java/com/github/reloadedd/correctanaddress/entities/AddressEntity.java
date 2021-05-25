@@ -29,11 +29,13 @@ public class AddressEntity {
     private final String countryName;
     private final String stateName;
     private final String cityName;
+    private final String language;
 
-    public AddressEntity(String countryName, String stateName, String cityName) {
+    public AddressEntity(String countryName, String stateName, String cityName, String language) {
         this.countryName = countryName;
         this.stateName = stateName;
         this.cityName = cityName;
+        this.language = language;
     }
 
     public String getCountryName() {
@@ -46,5 +48,9 @@ public class AddressEntity {
 
     public String getCityName() {
         return cityName;
+    }
+
+    public String getLanguage() {
+        return language;
     }
 }

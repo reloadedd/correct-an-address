@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - The GUI program successfully works by communicating with the remote REST API
+- Add support for multiple languages (Romanian, English, Spanish)
 
 ## [0.6.0] - 2021-05-25
 ### Added

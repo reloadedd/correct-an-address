@@ -46,12 +46,13 @@ public class CorrectAddressRoute {
 
     @PostMapping
     public String getCorrectAddress(@RequestParam String country, @RequestParam String state,
-                                    @RequestParam String city, Model model) {
+                                    @RequestParam String city, @RequestParam String language, Model model) {
         final RestTemplate restTemplate = new RestTemplateBuilder().build();
         MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
         map.put("country", Collections.singletonList(country));
         map.put("state", Collections.singletonList(state));
         map.put("city", Collections.singletonList(city));
+        map.put("language", Collections.singletonList(language));
 
         /* Set Content-Type header to JSON */
         HttpHeaders headers = new HttpHeaders();
