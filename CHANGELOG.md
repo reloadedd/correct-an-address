@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2021-05-25
 ### Added
 - The GUI program successfully works by communicating with the remote REST API
 - Add support for multiple languages (Romanian, English, Spanish)
+- Add Unit Tests for checking that the functionality is the one intended
 
 ## [0.6.0] - 2021-05-25
 ### Added
@@ -69,7 +71,8 @@ the main page.
 - Create Dockerfile
 - Create this changelog
 
-[Unreleased]: https://github.com/reloadedd/correct-an-address/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/reloadedd/correct-an-address/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/reloadedd/correct-an-address/releases/tag/v0.7.0
 [0.6.0]: https://github.com/reloadedd/correct-an-address/releases/tag/v0.6.0
 [0.5.0]: https://github.com/reloadedd/correct-an-address/releases/tag/v0.5.0
 [0.4.0]: https://github.com/reloadedd/correct-an-address/releases/tag/v0.4.0
