@@ -19,12 +19,23 @@
 
 package com.github.reloadedd;
 
+import com.github.reloadedd.entities.HereMapsAddressEntity;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Region;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.Collections;
 
 
 /**
@@ -39,15 +50,43 @@ public class Controller {
     @FXML public TextField state;
     @FXML public TextField city;
     @FXML public Button exitButton;
+    private static final String CORRECT_ADDRESS_API_URL = "https://reloadedd.me:5443/api/correct-this-address";
 
     public void correctAddress(ActionEvent actionEvent) {
         if (!this.validateUserInputFromFields()) {
             return;
         }
 
-        System.out.println("country is" + country.getText());
-        System.out.println("state is" + state.getText());
-        System.out.println("city is" + city.getText());
+        final RestTemplate restTemplate = new RestTemplateBuilder().build();
+        MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
+        map.put("country", Collections.singletonList(country.getText()));
+        map.put("state", Collections.singletonList(state.getText()));
+        map.put("city", Collections.singletonList(city.getText()));
+
+        /* Set Content-Type header to JSON */
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+
+        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
+        HereMapsAddressEntity response = restTemplate.postForObject(CORRECT_ADDRESS_API_URL, request,
+                HereMapsAddressEntity.class);
+
+        assert response != null;
+        System.out.println(response.constructAddress());
+        System.out.println(response.getGoogleMapsAddress());
+//        model.addAttribute("address", response.constructAddress());
+//        model.addAttribute("query",
+//                new GoogleMapsQueryEntity(response.getGoogleMapsAddress()).getGoogleMapsURL());
+
+        Alert alert = new Alert(Alert.AlertType.NONE);
+
+        /* Set up an alert message informing the user about the new corrected address */
+        alert.setAlertType(Alert.AlertType.INFORMATION);
+        alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        alert.setHeaderText("Thinking...Aaand done!");
+        alert.setContentText("Our super intelligent systems found and corrected your address to:\n\t" +
+                response.constructAddress());
+        alert.show();
     }
 
     private boolean validateUserInputFromFields() {

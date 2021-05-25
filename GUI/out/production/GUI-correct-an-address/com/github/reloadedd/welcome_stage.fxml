@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -9,17 +10,17 @@
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="109.0" layoutY="208.0" prefWidth="142.0" text="Country:">
+            <Label fx:id="countryLabel" layoutX="137.0" layoutY="209.0" prefHeight="30.0" prefWidth="117.0" text="Country:">
                <font>
                   <Font name="Droid Serif Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="109.0" layoutY="274.0" text="State:">
+            <Label fx:id="stateLabel" layoutX="172.0" layoutY="272.0" text="State:">
                <font>
                   <Font name="Droid Serif Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="109.0" layoutY="330.0" text="City:">
+            <Label fx:id="cityLabel" layoutX="186.0" layoutY="330.0" text="City:">
                <font>
                   <Font name="Droid Serif Bold" size="25.0" />
                </font>
@@ -45,10 +46,13 @@
                         <Font name="Droid Serif Bold" size="30.0" />
                      </font>
                   </Button>
-                  <Label layoutX="126.0" layoutY="690.0" text="Ionuț Roșca © 2021">
+                  <Label layoutX="127.0" layoutY="692.0" text="Ionuț Roșca © 2021">
                      <font>
-                        <Font name="Courier New" size="13.0" />
+                        <Font name="Courier New" size="15.0" />
                      </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.46" fraction="0.85" topOpacity="0.78" />
+                     </effect>
                   </Label>
                </children>
             </AnchorPane>

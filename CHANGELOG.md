@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- The GUI program successfully works by communicating with the remote REST API
+
 ## [0.6.0] - 2021-05-25
 ### Added
 - `/results` route that will display the corrected address into a Google Maps view.
