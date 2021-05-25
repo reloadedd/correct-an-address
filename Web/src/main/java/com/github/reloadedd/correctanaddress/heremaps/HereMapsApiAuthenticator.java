@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.github.reloadedd.correctanaddress.here;
+package com.github.reloadedd.correctanaddress.heremaps;
 
 import com.here.account.oauth2.HereAccessTokenProvider;
 
@@ -26,38 +26,23 @@ import com.here.account.oauth2.HereAccessTokenProvider;
  *
  * @version 0.1.0
  */
-public class HereMapsApiAuthentication {
+public class HereMapsApiAuthenticator {
     /**
      * A simple method that builds a HereAccessTokenProvider,
      * gets one Access Token,
      * and if successful outputs the first few characters of the valid token.
      */
-    public void doGetAccessToken() {
+    public String getAccessToken() {
         try {
-            // use your provided System properties, ~/.here/credentials.ini, or credentials.properties file
             HereAccessTokenProvider accessTokens = HereAccessTokenProvider.builder().build();
 
-            // call accessTokens.getAccessToken(); every time one is needed, it will always be fresh
-            String accessToken = accessTokens.getAccessToken();
-            // use accessToken on a request...
-
-            useAccessToken(accessToken);
+            /* call accessTokens.getAccessToken(); every time one is needed, it will always be fresh */
+            return accessTokens.getAccessToken();
         } catch (Exception e) {
-            trouble(e);
+            System.err.println("[ ERROR ]: " + e);
+            e.printStackTrace();
         }
-    }
 
-    protected void useAccessToken(String accessToken) {
-        System.out.println("got HERE Access Token: " + accessToken);
-    }
-
-    protected void trouble(Exception e) {
-        System.err.println("trouble " + e);
-        e.printStackTrace();
-        exit(1);
-    }
-
-    protected void exit(int status) {
-        System.exit(status);
+        return null;
     }
 }

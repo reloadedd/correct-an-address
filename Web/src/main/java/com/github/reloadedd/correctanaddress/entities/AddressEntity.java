@@ -18,8 +18,6 @@
 
 package com.github.reloadedd.correctanaddress.entities;
 
-import org.apache.commons.text.StringEscapeUtils;
-
 
 /**
  * A simple class representing an address.
@@ -38,19 +36,15 @@ public class AddressEntity {
         this.cityName = cityName;
     }
 
-    private String capitalizeFirstLetter(String what) {
-        String firstLetter = what.substring(0, 1);
-        String remainingLetters = what.substring(1);
-
-        /* change the first letter to uppercase */
-        firstLetter = firstLetter.toUpperCase();
-
-        return firstLetter + remainingLetters;
+    public String getCountryName() {
+        return countryName;
     }
 
-    public String constructAddress() {
-        return StringEscapeUtils.escapeHtml4(String.format("%s, %s, %s", this.capitalizeFirstLetter(this.countryName),
-                this.capitalizeFirstLetter(this.stateName),
-                this.capitalizeFirstLetter(this.cityName)));
+    public String getStateName() {
+        return stateName;
+    }
+
+    public String getCityName() {
+        return cityName;
     }
 }

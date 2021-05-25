@@ -16,26 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.github.reloadedd.correctanaddress.entities;
+package com.github.reloadedd.correctanaddress.exceptions;
 
-
-/**
- * Entity class responsible with the generation of a valid Google Maps url.
- *
- * @author  Ionuț Roșca
- * @version 0.1.0
- */
-public class GoogleMapsQueryEntity {
-    private static final String GOOGLE_MAPS_URL = "https://www.google.com/maps/embed/v1/place";
-    private static final String API_KEY = "AIzaSyBGZuTWkfZ_hjNmMT-b70Z2ka6BAZCYkCM";
-    private static final int ZOOM_LEVEL = 15;
-    private final String googleMapsAddress;
-
-    public GoogleMapsQueryEntity(String googleMapsAddress) {
-        this.googleMapsAddress = googleMapsAddress;
-    }
-
-    public String getGoogleMapsURL() {
-        return String.format("%s?key=%s&q=%s&zoom=%d", GOOGLE_MAPS_URL, API_KEY, this.googleMapsAddress, ZOOM_LEVEL);
-    }
+public class NoTokenReceivedException extends Exception {
 }
