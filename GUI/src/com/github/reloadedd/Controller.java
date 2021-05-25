@@ -50,6 +50,7 @@ public class Controller {
     @FXML public TextField state;
     @FXML public TextField city;
     @FXML public Button exitButton;
+    private static final String DEFAULT_LANGUAGE = "en-US";
     private static final String CORRECT_ADDRESS_API_URL = "https://reloadedd.me:5443/api/correct-this-address";
 
     public void correctAddress(ActionEvent actionEvent) {
@@ -62,6 +63,7 @@ public class Controller {
         map.put("country", Collections.singletonList(country.getText()));
         map.put("state", Collections.singletonList(state.getText()));
         map.put("city", Collections.singletonList(city.getText()));
+        map.put("language", Collections.singletonList(DEFAULT_LANGUAGE));
 
         /* Set Content-Type header to JSON */
         HttpHeaders headers = new HttpHeaders();
@@ -72,15 +74,9 @@ public class Controller {
                 HereMapsAddressEntity.class);
 
         assert response != null;
-        System.out.println(response.constructAddress());
-        System.out.println(response.getGoogleMapsAddress());
-//        model.addAttribute("address", response.constructAddress());
-//        model.addAttribute("query",
-//                new GoogleMapsQueryEntity(response.getGoogleMapsAddress()).getGoogleMapsURL());
-
-        Alert alert = new Alert(Alert.AlertType.NONE);
 
         /* Set up an alert message informing the user about the new corrected address */
+        Alert alert = new Alert(Alert.AlertType.NONE);
         alert.setAlertType(Alert.AlertType.INFORMATION);
         alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
         alert.setHeaderText("Thinking...Aaand done!");
